@@ -8,11 +8,13 @@ bind
 
 **小主机，请不要攻击，感谢**
 
+过程记录 http://417e7e7c.wiz03.com/share/s/11vDVY0SpQJT2K3Oq51lD14a0h-SP_309kVf2pRRs-1dcISe
+
 ### 说明 
 
 * `name.conf` 总配置入口, logging配置
 * `name.conf.local` 域名zone的分布和acl配置
-* `name.conf.options` forwords配置还有服务监听等配置，转发的重要配置都在这里
+* `name.conf.options` forwards配置还有服务监听等配置，转发的重要配置都在这里
 * `db.*` 具体的zone配置
 
 ### 实现功能
@@ -35,7 +37,7 @@ dig cn.orangleliu.info +short
 45.78.37.246
 ```
 
-dns forword功能
+dns forwards 功能
 ```
 dig google.com @118.24.169.84
 
