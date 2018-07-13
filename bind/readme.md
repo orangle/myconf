@@ -2,7 +2,11 @@ bind
 =====
 
 version    `bing9.10`
+name server  `118.24.169.84`
+my domain   `orangleliu.info`, 解析服务dnspod提供
+test domain  `cn.orangleliu.info`, 权威dns测试域名
 
+**小主机，请不要攻击，感谢**
 
 ### 说明 
 
