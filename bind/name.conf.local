@@ -1,0 +1,24 @@
+//include "/etc/bind/zones.rfc1918";
+#zone "cn.orangleliu.info" {
+#	type master;
+#	file "/etc/bind/db.cn.orangleliu.info";
+#};
+
+acl "china" {
+	geoip country CN;
+};
+
+view "china" {
+	match-clients { china; };
+	zone "cn.orangleliu.info" {
+		file "/etc/bind/db.china.cn.orangleliu.info";
+		type master;
+	};
+};
+
+view "default" {
+	zone "cn.orangleliu.info" {
+		file "/etc/bind/db.default.cn.orangleliu.info";
+		type master;
+	};
+};

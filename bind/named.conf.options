@@ -1,0 +1,18 @@
+options {
+	listen-on port 53  { any; };  // default localhost
+	directory "/var/cache/bind";
+	allow-query        { any; };  // default just localhost client can query
+
+	recursion yes;
+	forwarders {
+		119.29.29.29;
+		223.5.5.5;
+	};
+	forward only;
+
+
+	dnssec-enable yes;
+	dnssec-validation yes;
+	auth-nxdomain no;    # conform to RFC1035
+	listen-on-v6 { any; };
+};
